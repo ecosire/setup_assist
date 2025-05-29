@@ -2,30 +2,33 @@
 {
     'name': 'Odoo Setup Assistant',
     'module_name': 'odoo_setup_assistant',
-    'version': '1.1', # Incremented version for new features
+    'version': '1.9', # Incremented version for new features
     'summary': 'Diagnose Odoo setup, configuration, dependencies, and manage addon Python requirements.',
-    'description': """
-This module provides a comprehensive toolkit to:
-- Check for missing Python libraries and system dependencies.
-- Analyze Odoo database connectivity and configuration.
-- Perform a deep scan of the odoo.conf file for best practices and common issues.
-- Scan Odoo addons for their Python dependencies (requirements.txt) and allow automatic installation of missing packages.
-Helps ensure your Odoo environment is correctly set up for optimal performance and stability.
-    """,
+    'description': 'static/description/index.html',
     'author': 'ECOSIRE (PRIVATE) LIMITED',
     'website': 'https://www.ecosire.com/',
     'category': 'Extra Tools', # Or 'Administration', 'Technical'
-    'depends': ['base'], # Depends on the base Odoo module
+    'depends': ['base', 'mail'], # Depends on the base Odoo module and mail for mail.thread/activity
     'data': [
         'security/ir.model.access.csv',
+        'views/menu.xml',
+        'views/github_repo_views.xml',
         'views/odoo_setup_assistant_views.xml',
+        'views/res_config_settings_views.xml',
+        'data/setup_assist_data.xml',
         # Add security CSV if specific groups beyond base.group_system are needed later
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
+<<<<<<< HEAD:__manifest__.py
     'license': 'LGPL-3',
     'compatible_version': '18.3',
+=======
+    'license': 'OPL-1',
+    'compatible_version': '18.0',
+    'images': ['static/description/cover.png'],
+>>>>>>> 18.0:odoo_setup_assistant/__manifest__.py
     # It's good practice to note external Python dependencies if your module *itself*
     # directly depends on something not standard in Odoo's core requirements.
     # For the 'packaging' library used by addon_requirements_checker.py,
