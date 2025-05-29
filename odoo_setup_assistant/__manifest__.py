@@ -17,7 +17,7 @@
     'application': True,
     'auto_install': False,
     'license': 'OPL-1',
-    'compatible_version': '17.0',
+    # 'compatible_version': '16.0',  # Odoo 16 does not use this key, so it is commented out/removed
     'images': ['static/description/cover.png'],
     # It's good practice to note external Python dependencies if your module *itself*
     # directly depends on something not standard in Odoo's core requirements.
