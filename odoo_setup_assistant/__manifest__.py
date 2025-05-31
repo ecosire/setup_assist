@@ -21,14 +21,9 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-<<<<<<< HEAD:__manifest__.py
-    'license': 'LGPL-3',
-    'compatible_version': '18.3',
-=======
     'license': 'OPL-1',
     'compatible_version': '18.0',
     'images': ['static/description/cover.png'],
->>>>>>> 18.0:odoo_setup_assistant/__manifest__.py
     # It's good practice to note external Python dependencies if your module *itself*
     # directly depends on something not standard in Odoo's core requirements.
     # For the 'packaging' library used by addon_requirements_checker.py,
